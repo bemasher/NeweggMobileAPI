@@ -15,4 +15,7 @@ From this point forward a few conventions will be used for readability:
 
 ## Table of Contents
  * [Home](home.md)
+ * [Browsing](browsing.md)
  * [Searching](searching.md)
+ * [Filtering](filtering.md)
+ * [Items](items.md)

@@ -29,7 +29,7 @@ Content-Type: application/x-www-form-urlencoded
 See [Search Results](#search-results).
 
 ## Searching by Category
-To view items belonging to a category. The following maps fields of a sub-category to fields of the request body. See Browsing for more information on these fields.
+To view items belonging to a category. The following maps fields of a sub-category to fields of the request body. See [Browsing](browsing.md#sub-category-menu) for more information on these fields.
 
 <table>
 	<tr><th>Request Field</th><th>Sub-Category Menu Fields</th></tr>
@@ -69,7 +69,7 @@ When selecting the search button a search prompt is brought up which performs au
 
 ### Request
 ```
-GET http://www.ows.newegg.com/AutoKeywords.egg/?keyword=haswell HTTP/1.1
+GET http://www.ows.newegg.com/AutoKeywords.egg/?keyword=haswell
 ```
 
 ### Response

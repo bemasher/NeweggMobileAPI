@@ -89,3 +89,6 @@ GET /Stores.egg/Navigation/1/34/6676/
 	...
 ]
 ```
+
+## Searching
+See [Searching](searching.md#searching-by-category) for information on getting items in sub-categories.
