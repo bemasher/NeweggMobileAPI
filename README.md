@@ -9,7 +9,9 @@ All traffic was sniffed and analyzed using [Fiddler 2](http://fiddler2.com/).
 While sniffing traffic, all available options and browsable locations were visited inside the mobile application.
 
 ## Conventions
-From this point forward `...` indicates that there are multiples of the item the elipses follows or leads, as in lists.
+From this point forward a few conventions are used to improve readability:
+ * `...` indicates that there are multiples of the item the elipses follows or leads, as in lists.
+ * Unless stated otherwise, all requests are absolute and directed at: http://www.ows.newegg.com/
 
 ## Table of Contents
  * [Home](home.md)
