@@ -3,44 +3,9 @@
 Starting in the home tab, a list of stores are populated as buttons at the bottom of the screen. These include stores like: Electronic, PC Showcase and Build Your Own. The iPhone app does not appear to make use of the `Description` or `BannerImage` fields in each of the `ShoppingGuide` objects.
 ### Request
 ```
-GET /Configurations.egg/ShoppingGuideConfig HTTP/1.1
-Host: www.ows.newegg.com
-User-Agent: Newegg iPhone App / 3.1.2
-Accept: */*
-Accept-Encoding: gzip, deflate
-Accept-Language: en-us
-Connection: keep-alive
-Cookie: ###
-Mobilevisitor: VERSIONINFO=iPhone App 3.1.2
-X-Highresolution: true
-X-Signature: ###
-X-Timestamp: 1371995642.144446
+GET /Configurations.egg/ShoppingGuideConfig
 ```
 ### Response
-```
-HTTP/1.1 200 OK
-Content-Length: 689
-Accept-Ranges: bytes
-Age: 0
-Cache-Control: private
-Connection: keep-alive
-Content-Encoding: gzip
-Content-Type: application/json; charset=utf-8
-Date: Sun, 23 Jun 2013 13:50:47 GMT
-Server: Microsoft-IIS/7.5
-Server: NEG-Server
-Set-Cookie: ***;
-Vary: Accept-Encoding
-X-Aspnet-Version: 2.0.50727
-X-Aspnetmvc-Version: 1.0
-X-Cache: MISS
-X-Cache-Hits: 0
-X-Served-By: E313
-X-Server-Id: 14
-X-Ver: 13012401
-```
-
-### Response Body
 ```JSON
 {
 	"Enable": true,
@@ -86,45 +51,10 @@ The spotlight is a single featured item. This item shares the same format for it
 
 ### Request
 ```
-GET /Promotions.egg/Spotlight HTTP/1.1
-Host: www.ows.newegg.com
-User-Agent: Newegg iPhone App / 3.1.2
-Accept: */*
-Accept-Encoding: gzip, deflate
-Accept-Language: en-us
-Connection: keep-alive
-Cookie: ###
-Mobilevisitor: VERSIONINFO=iPhone App 3.1.2
-X-Highresolution: true
-X-Signature: ###
-X-Timestamp: 1371995642.143917
+GET /Promotions.egg/Spotlight
 ```
 
 ### Response
-```
-HTTP/1.1 200 OK
-Content-Length: 682
-Accept-Ranges: bytes
-Age: 0
-Cache-Control: private
-Connection: keep-alive
-Content-Encoding: gzip
-Content-Type: application/json; charset=utf-8
-Date: Sun, 23 Jun 2013 13:50:47 GMT
-Server: Microsoft-IIS/7.5
-Server: NEG-Server
-Set-Cookie: ###
-Vary: Accept-Encoding
-X-Aspnet-Version: 2.0.50727
-X-Aspnetmvc-Version: 1.0
-X-Cache: MISS
-X-Cache-Hits: 0
-X-Served-By: E313
-X-Server-Id: 13
-X-Ver: 13012401
-```
-
-### Response Body
 ```JSON
 {
 	"ItemNumber": "9SIA04M0CN1405",
@@ -167,45 +97,10 @@ Shell shockers are shown as an automatically rotating list of shell shocker item
 
 ### Request
 ```
-GET /Promotions.egg/ShellShockers HTTP/1.1
-Host: www.ows.newegg.com
-User-Agent: Newegg iPhone App / 3.1.2
-Accept: */*
-Accept-Encoding: gzip, deflate
-Accept-Language: en-us
-Connection: keep-alive
-Cookie: ###
-Mobilevisitor: VERSIONINFO=iPhone App 3.1.2
-X-Highresolution: true
-X-Signature: ###
-X-Timestamp: 1371995642.143389
+GET /Promotions.egg/ShellShockers
 ```
 
 ### Response
-```
-HTTP/1.1 200 OK
-Content-Length: 1019
-Accept-Ranges: bytes
-Age: 0
-Cache-Control: private
-Connection: keep-alive
-Content-Encoding: gzip
-Content-Type: application/json; charset=utf-8
-Date: Sun, 23 Jun 2013 13:50:47 GMT
-Server: Microsoft-IIS/7.5
-Server: NEG-Server
-Set-Cookie: ###
-Vary: Accept-Encoding
-X-Aspnet-Version: 2.0.50727
-X-Aspnetmvc-Version: 1.0
-X-Cache: MISS
-X-Cache-Hits: 0
-X-Served-By: E313
-X-Server-Id: 12
-X-Ver: 13012401
-```
-
-### Response Body
 ```JSON
 [
 	{
@@ -264,38 +159,7 @@ The purpose of this request is unknown.
 
 ### Request
 ```
-GET /Promotions.egg/Activity HTTP/1.1
-Host: www.ows.newegg.com
-User-Agent: Newegg iPhone App / 3.1.2
-Accept: */*
-Accept-Encoding: gzip, deflate
-Accept-Language: en-us
-Connection: keep-alive
-Cookie: ###
-Mobilevisitor: VERSIONINFO=iPhone App 3.1.2
-X-Highresolution: true
-X-Signature: ###
-X-Timestamp: 1371995642.142075
-```
-
-### Response
-```
-HTTP/1.1 200 OK
-Accept-Ranges: bytes
-Age: 0
-Cache-Control: private
-Connection: keep-alive
-Date: Sun, 23 Jun 2013 13:50:47 GMT
-Server: Microsoft-IIS/7.5
-Server: NEG-Server
-Set-Cookie: ###
-X-Aspnet-Version: 2.0.50727
-X-Aspnetmvc-Version: 1.0
-X-Cache: MISS
-X-Cache-Hits: 0
-X-Served-By: E313
-X-Server-Id: 04
-X-Ver: 13012401
+GET /Promotions.egg/Activity
 ```
 
 ## iPhone Client
@@ -303,44 +167,10 @@ This request appears to be used provide default settings to the app. There are o
 
 ### Request
 ```
-GET /Configuration.egg/IphoneClient HTTP/1.1
-Host: www.ows.newegg.com
-User-Agent: Newegg iPhone App / 3.1.2
-Accept: */*
-Accept-Encoding: gzip, deflate
-Accept-Language: en-us
-Connection: keep-alive
-Cookie: ###
-Mobilevisitor: VERSIONINFO=iPhone App 3.1.2
-X-Highresolution: true
-X-Signature: ###
-X-Timestamp: 1371995641.337552
+GET /Configuration.egg/IphoneClient
 ```
 
 ### Response
-```
-HTTP/1.1 200 OK
-Content-Length: 859
-Accept-Ranges: bytes
-Age: 0
-Cache-Control: private
-Connection: keep-alive
-Content-Encoding: gzip
-Content-Type: application/json; charset=utf-8
-Date: Sun, 23 Jun 2013 13:50:46 GMT
-Server: Microsoft-IIS/7.5
-Server: NEG-Server
-Vary: Accept-Encoding
-X-Aspnet-Version: 2.0.50727
-X-Aspnetmvc-Version: 1.0
-X-Cache: MISS
-X-Cache-Hits: 0
-X-Served-By: E313
-X-Server-Id: 24
-X-Ver: 13012401
-```
-
-### Response Body
 ```JSON
 {
 	"ServiceHost": {

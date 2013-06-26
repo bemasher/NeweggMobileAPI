@@ -58,7 +58,7 @@ As you can see `NValue` is empty indicating no filters have been applied. To app
 }
 ```
 
-In the following example the processors are filtered by those falling into the `$50 - $75` category. The `NavigationContentList` of the response includes a list of filters omitting filters which would produce no results or categories which already have a filter selected. The effect is that only a single filter per category may be applied in guided search.
+In the following example the processors are filtered by those falling into the `$50 - $75` category. The `NavigationContentList` of the response includes a list of filters, omitting those which would produce no results or categories which already have a filter selected. The effect is that only a single filter per category may be applied in guided search.
 
 ```JSON
 {
@@ -80,6 +80,7 @@ The available filters given in the response are as follows:
 ```JSON
 {
 	"NavigationContentList": [
+		...
 		{
 			"TitleItem": {
 				"Description": "Series",
@@ -102,36 +103,6 @@ The available filters given in the response are as follows:
 					"Description": "Pentium",
 					"NValue": "100007671 50001157 4026 600005583",
 					"ElementValue": "600005583"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "Useful Links",
-				"ItemCount": 0,
-				"NValue": "4800",
-				"ElementValue": "4800"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "Free Shipping",
-					"NValue": "100007671 50001157 4026 4808",
-					"ElementValue": "4808"
-				},
-				{
-					"Description": "ShopRunner Eligible",
-					"NValue": "100007671 50001157 4026 4815",
-					"ElementValue": "4815"
-				},
-				{
-					"Description": "Discount Item",
-					"NValue": "100007671 50001157 4026 4803",
-					"ElementValue": "4803"
-				},
-				{
-					"Description": "Refurbished",
-					"NValue": "100007671 50001157 4026 4016",
-					"ElementValue": "4016"
 				}
 			]
 		},
@@ -180,186 +151,7 @@ The available filters given in the response are as follows:
 				}
 			]
 		},
-		{
-			"TitleItem": {
-				"Description": "Operating Frequency",
-				"ItemCount": 0,
-				"NValue": "600005681",
-				"ElementValue": "600005681"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "2.5GHz - 2.99GHz",
-					"NValue": "100007671 50001157 4026 600005685",
-					"ElementValue": "600005685"
-				},
-				{
-					"Description": "3.0GHz and higher",
-					"NValue": "100007671 50001157 4026 600005686",
-					"ElementValue": "600005686"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "FSB",
-				"ItemCount": 0,
-				"NValue": "600005754",
-				"ElementValue": "600005754"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "1066MHz",
-					"NValue": "100007671 50001157 4026 600005761",
-					"ElementValue": "600005761"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "L2 Cache",
-				"ItemCount": 0,
-				"NValue": "600005782",
-				"ElementValue": "600005782"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "3MB",
-					"NValue": "100007671 50001157 4026 600005801",
-					"ElementValue": "600005801"
-				},
-				{
-					"Description": "2 x 256KB",
-					"NValue": "100007671 50001157 4026 600005792",
-					"ElementValue": "600005792"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "L3 Cache",
-				"ItemCount": 0,
-				"NValue": "600005808",
-				"ElementValue": "600005808"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "2MB",
-					"NValue": "100007671 50001157 4026 600005811",
-					"ElementValue": "600005811"
-				},
-				{
-					"Description": "3MB",
-					"NValue": "100007671 50001157 4026 600005816",
-					"ElementValue": "600005816"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "Manufacturing Tech",
-				"ItemCount": 0,
-				"NValue": "600005818",
-				"ElementValue": "600005818"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "45 nm",
-					"NValue": "100007671 50001157 4026 600005824",
-					"ElementValue": "600005824"
-				},
-				{
-					"Description": "32 nm",
-					"NValue": "100007671 50001157 4026 600005825",
-					"ElementValue": "600005825"
-				},
-				{
-					"Description": "22 nm",
-					"NValue": "100007671 50001157 4026 600315411",
-					"ElementValue": "600315411"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "Hyper-Threading Support",
-				"ItemCount": 0,
-				"NValue": "600000350",
-				"ElementValue": "600000350"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "No",
-					"NValue": "100007671 50001157 4026 600000352",
-					"ElementValue": "600000352"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "Virtualization Technology Support",
-				"ItemCount": 0,
-				"NValue": "600031497",
-				"ElementValue": "600031497"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "Yes",
-					"NValue": "100007671 50001157 4026 600031498",
-					"ElementValue": "600031498"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "Thermal Design Power",
-				"ItemCount": 0,
-				"NValue": "600039173",
-				"ElementValue": "600039173"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "55W",
-					"NValue": "100007671 50001157 4026 600039185",
-					"ElementValue": "600039185"
-				},
-				{
-					"Description": "65W",
-					"NValue": "100007671 50001157 4026 600039174",
-					"ElementValue": "600039174"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "Cooling Device",
-				"ItemCount": 0,
-				"NValue": "600000360",
-				"ElementValue": "600000360"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "Heatsink and Fan included",
-					"NValue": "100007671 50001157 4026 600000361",
-					"ElementValue": "600000361"
-				}
-			]
-		},
-		{
-			"TitleItem": {
-				"Description": "Integrated Graphics",
-				"ItemCount": 0,
-				"NValue": "600001656",
-				"ElementValue": "600001656"
-			},
-			"NavigationItemList": [
-				{
-					"Description": "Intel HD Graphics",
-					"NValue": "100007671 50001157 4026 600265638",
-					"ElementValue": "600265638"
-				}
-			]
-		}
+		...
 	]
 }
 ```
@@ -384,4 +176,208 @@ To apply a second filter limiting the search to only `Intel` processors, the set
 
 To my knowledge the `NValue` list is unordered.
 
+## Power Search Filters
+Power searching requires a series of requests. The first of which returns a description of all filter categories and possible values for each filter. The following example is the list of available filters for `Computer Hardware` > `CPUs / Processors` > `Processors - Desktops`.
+### Request
+```
+GET /PowerSearchContent.egg/0/343/-1/
+```
+
+### Response
+```JSON
+{
+	"PageTitle": "Power Search: Processors - Desktops",
+	"CoremetricsInfo": {
+		"CategoryID": "ProductPowerSearch",
+		"ProductName": "",
+		"PageID": "ProductPowerSearch",
+		"Brand": ""
+	},
+	"PowerSearchOptions": [
+		...,
+		{
+			"TitleItem": {
+				"IsSelected": false,
+				"TId": 0,
+				"TitleText": "",
+				"ElementName": "",
+				"Description": "Multi-Core",
+				"StoreID": 0,
+				"CustomLink": "",
+				"ElementValue": "",
+				"BrandId": 0,
+				"CategoryId": 0,
+				"DepaId": 0,
+				"SubCategoryId": 0
+			},
+			"Items": [
+				{
+					"ElementName": "",
+					"ElementValue": "",
+					"Description": "Any",
+					"StoreID": 0,
+					"CustomLink": "",
+					"IsSelected": true,
+					"SubCategoryId": 0,
+					"TitleText": "",
+					"BrandId": 0,
+					"CategoryId": 0,
+					"DepaId": 0,
+					"TId": 0
+				},
+				{
+					"ElementName": "PropertyCodeValue",
+					"ElementValue": "3028:20276",
+					"Description": "Single-Core",
+					"StoreID": 0,
+					"CustomLink": "",
+					"IsSelected": false,
+					"SubCategoryId": 0,
+					"TitleText": "",
+					"BrandId": 0,
+					"CategoryId": 0,
+					"DepaId": 0,
+					"TId": 0
+				},
+				{
+					"ElementName": "PropertyCodeValue",
+					"ElementValue": "3028:20275",
+					"Description": "Dual-Core",
+					"StoreID": 0,
+					"CustomLink": "",
+					"IsSelected": false,
+					"SubCategoryId": 0,
+					"TitleText": "",
+					"BrandId": 0,
+					"CategoryId": 0,
+					"DepaId": 0,
+					"TId": 0
+				},
+				{
+					"ElementName": "PropertyCodeValue",
+					"ElementValue": "3028:34507",
+					"Description": "Triple-Core",
+					"StoreID": 0,
+					"CustomLink": "",
+					"IsSelected": false,
+					"SubCategoryId": 0,
+					"TitleText": "",
+					"BrandId": 0,
+					"CategoryId": 0,
+					"DepaId": 0,
+					"TId": 0
+				},
+				{
+					"ElementName": "PropertyCodeValue",
+					"ElementValue": "3028:25342",
+					"Description": "Quad-Core",
+					"StoreID": 0,
+					"CustomLink": "",
+					"IsSelected": false,
+					"SubCategoryId": 0,
+					"TitleText": "",
+					"BrandId": 0,
+					"CategoryId": 0,
+					"DepaId": 0,
+					"TId": 0
+				},
+				{
+					"ElementName": "PropertyCodeValue",
+					"ElementValue": "3028:55196",
+					"Description": "Six-Core",
+					"StoreID": 0,
+					"CustomLink": "",
+					"IsSelected": false,
+					"SubCategoryId": 0,
+					"TitleText": "",
+					"BrandId": 0,
+					"CategoryId": 0,
+					"DepaId": 0,
+					"TId": 0
+				},
+				{
+					"ElementName": "PropertyCodeValue",
+					"ElementValue": "3028:193801",
+					"Description": "Eight-Core",
+					"StoreID": 0,
+					"CustomLink": "",
+					"IsSelected": false,
+					"SubCategoryId": 0,
+					"TitleText": "",
+					"BrandId": 0,
+					"CategoryId": 0,
+					"DepaId": 0,
+					"TId": 0
+				}
+			]
+		},
+		...
+	]
+}
+```
+
 ## Power Search
+### Single Filter
+To search using a particular filter the `ElementValue` must be split on the `:` and added to the `SearchProperies` list in the request body. For example searching for quad-core processors can be done using the following request:
+
+### Request
+```
+POST /PowerSearch.egg
+```
+
+### Request Body
+The `ElementValue` for quad-core processors is `3028:25342`.
+```JSON
+{
+	"PageNumber": 1,
+	"ProductType": [],
+	"SearchProperties": [
+		{
+			"PropertyId": "3028",
+			"ValueId": "25342"
+		}
+	],
+	"MinPrice": "",
+	"NValues": "100007671",
+	"SrchInDesc": "",
+	"BrandList": [],
+	"MaxPrice": ""
+}
+```
+
+### Response
+See Searching.
+
+### Multiple Filters
+Searching with multiple filters in the same category is done by appending multiple filters to the `SearchProperties` list. The following example searches for quad-, hexa- and octo-core processors.
+```JSON
+{
+	"PageNumber": 1,
+	"ProductType": [],
+	"SearchProperties": [
+		{
+			"PropertyId": "3028",
+			"ValueId": "25342"
+		},
+		{
+			"PropertyId": "3028",
+			"ValueId": "55196"
+		},
+		{
+			"PropertyId": "3028",
+			"ValueId": "193801"
+		}
+	],
+	"MinPrice": "",
+	"NValues": "100007671",
+	"SrchInDesc": "",
+	"BrandList": [],
+	"MaxPrice": ""
+}
+```
+
+### Exceptions
+ * The `NValue` field appears to be populated using data from the response to the `/Search.egg/Advanced/` request.
+ * Filtering on `ProductType` appends the `ElementValue` to the `ProductType` field instead of `SearchProperties`.
+ * Filtering on manufacturer appends the `ElementValue` to the `BrandList` field instead of `SearchProperties`.
+ * `MinPrice` and `MaxPrice` fields don't appear to be used by the iPhone application, despite being present in all power search request bodies.

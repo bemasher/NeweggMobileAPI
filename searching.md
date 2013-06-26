@@ -4,22 +4,8 @@ The requests sends a JSON structure indicating a keyword search and a starting p
 
 ### Request
 ```
-POST http://www.ows.newegg.com/Search.egg/Advanced/ HTTP/1.1
-Host: www.ows.newegg.com
-Pragma: no-cache
-Accept-Language: en-us
-User-Agent: Newegg iPhone App / 3.1.2
-X-HighResolution: true
-Accept: */*
+POST /Search.egg/Advanced/
 Content-Type: application/x-www-form-urlencoded
-MobileVisitor: VERSIONINFO=iPhone App 3.1.2
-Connection: keep-alive
-X-Signature: ###
-Cookie: ###
-Connection: keep-alive
-X-Timestamp: 1372061413.616621
-Content-Length: 201
-Accept-Encoding: gzip, deflate
 ```
 
 ### Request Body
@@ -46,7 +32,7 @@ See [Search Results](#search-results).
 To view items belonging to a category. The following maps fields of a sub-category to fields of the request body. See Browsing for more information on these fields.
 
 <table>
-	<tr><th>Request Field</th><th>Description</th></tr>
+	<tr><th>Request Field</th><th>Sub-Category Menu Fields</th></tr>
 	<tr><td>StoreID</td><td>StoreDepaId</td></tr>
 	<tr><td>NodeId</td><td>NodeId</td></tr>
 	<tr><td>CategoryID</td><td>SubCategoryId</td></tr>
@@ -54,23 +40,8 @@ To view items belonging to a category. The following maps fields of a sub-catego
 
 ### Request
 ```
-POST /Search.egg/Advanced/ HTTP/1.1
-Host: www.ows.newegg.com
-Accept-Language: en-us
-User-Agent: Newegg iPhone App / 3.1.2
-Pragma: no-cache
-X-ThirdParty-UTMA: ###
-X-HighResolution: true
-Accept: */*
+POST /Search.egg/Advanced/
 Content-Type: application/x-www-form-urlencoded
-MobileVisitor: ###
-Connection: keep-alive
-X-Signature: ###
-Cookie: ###
-Connection: keep-alive
-X-Timestamp: 1372063252.254962
-Content-Length: 189
-Accept-Encoding: gzip, deflate
 ```
 
 ### Request body
@@ -99,47 +70,9 @@ When selecting the search button a search prompt is brought up which performs au
 ### Request
 ```
 GET http://www.ows.newegg.com/AutoKeywords.egg/?keyword=haswell HTTP/1.1
-Host: www.ows.newegg.com
-Accept-Language: en-us
-Pragma: no-cache
-User-Agent: Newegg iPhone App / 3.1.2
-X-HighResolution: true
-Accept: */*
-Connection: keep-alive
-MobileVisitor: VERSIONINFO=iPhone App 3.1.2
-X-Signature: ###
-Cookie: ###
-Connection: keep-alive
-X-Timestamp: 1372061410.515868
-Accept-Encoding: gzip, deflate
 ```
 
 ### Response
-```
-HTTP/1.1 200 OK
-Cache-Control: private
-Content-Type: application/json; charset=utf-8
-Vary: Accept-Encoding
-Server: Microsoft-IIS/7.5
-X-AspNetMvc-Version: 1.0
-X-AspNet-Version: 2.0.50727
-Set-Cookie: ###
-Server: NEG-Server
-x-server-id: 124
-Content-Length: 499
-Accept-Ranges: bytes
-Date: Mon, 24 Jun 2013 08:10:11 GMT
-Age: 0
-Connection: keep-alive
-X-Served-By: E408
-X-Ver: 13012401
-X-Source-IP: ###
-X-client-IP: ###
-X-Cache: MISS
-X-Cache-Hits: 0
-```
-
-### Response Body
 ```JSON
 [
 	{
@@ -353,13 +286,13 @@ The largest portion of the response body is dedicated to `ProductListItems` whic
 ```
 
 ## Sorting
-Sorting search results is done by setting the `Sort` field to one of the following values:
+Sorting results is done by setting the `Sort` field of the request body to one of the following values. Defaults to `FEATURED`.
 
 <table>
 	<tr><th>Value</th><th>Description</th></tr>
- 	<tr><td>FEATURED</td><td>Featured Items</tr>
- 	<tr><td>RATING</td><td>Best Rating</tr>
- 	<tr><td>PRICE</td><td>Lowest Price</tr>
- 	<tr><td>PRICED</td><td>Highest Price</tr>
- 	<tr><td>REVIEWS</td><td>Most Reviews</tr>
- </table>
+	<tr><td>FEATURED</td><td>Featured Items</tr>
+	<tr><td>RATING</td><td>Best Rating</tr>
+	<tr><td>PRICE</td><td>Lowest Price</tr>
+	<tr><td>PRICED</td><td>Highest Price</tr>
+	<tr><td>REVIEWS</td><td>Most Reviews</tr>
+</table>
