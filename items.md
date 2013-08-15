@@ -479,6 +479,32 @@ GET /Products.egg/19-116-901/Specification/
 }
 ```
 
+Another common `GroupName` is `Manufacturer Warranty` which includes information about parts and labor warranties provided by the manufacturer.
+
+### Request
+```
+GET /Products.egg/17-139-010/Specification/
+```
+
+### Response
+```JSON
+...
+{
+	"GroupName": "Manufacturer Warranty",
+	"SpecificationPairList": [
+		{
+			"Key": "Parts",
+			"Value": "7 years limited"
+		},
+		{
+			"Key": "Labor",
+			"Value": "7 years limited"
+		}
+	]
+}
+...
+```
+
 ## Combo Deals
 ### Request
 ```
